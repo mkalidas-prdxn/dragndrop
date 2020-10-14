@@ -368,14 +368,13 @@ main .low :first-child { background-color: #fcff4a; }
   border-radius: 10px;
 }
 
-.counter .nocount { visibility: hidden;}
+.counter .nocount { visibility: hidden; }
 
 /* 4.3. FDraggables
      ========================================================================== */
 
-.draggables {
-  padding: 40px;
-}
+.draggables { padding: 40px; }
+
 .draggables .dragable {
   padding: 5px 10px;
   border-radius: 5px;
