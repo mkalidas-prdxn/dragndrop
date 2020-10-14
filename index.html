@@ -1,1 +1,71 @@
-<!---->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Drag-Drop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!--container starts here-->
+  <div class="container">
+    <!--header starts here-->
+    <header>
+      <div class="header wrapper cf">
+        <h1><a href="#FIXME" title="logo">LOGO</a></h1>
+        <div class="headerRight">
+          <span class="start">START</span>
+          <span>RESTART</span>
+        </div>
+      </div>
+    </header>
+    <!--header ends here-->
+    <!--main starts here-->
+    <main>
+      <div class="wrapper">
+        <span>SET YOUR PRIORITIES</span>
+        <div class="containers">
+          <div class="high drop">
+            <span>HIGH</span>
+          </div>
+          <div class="medium drop">
+            <span>MEDIUM</span>
+          </div>
+          <div class="low drop">
+            <span>LOW</span>
+          </div>
+        </div>
+        <div class="counter">
+          <div class="nocount high-count count">
+            <span>Total count :</span>
+            <span class="totalHigh"> </span>
+          </div>
+          <div class="nocount medium-count count">
+            <span>Total count :</span>
+            <span class="totalMedium"> </span>
+          </div>
+          <div class="nocount low-count count">
+            <span>Total count :</span>
+            <span class="totalLow"> </span>
+          </div>
+        </div>
+        <!-- Draggables start here -->
+        <div class="draggables drop">
+          <span class="dragable task2" draggable="true">TASK2</span>
+          <span class="dragable task3" draggable="true">TASK3</span>
+          <span class="dragable task4" draggable="true">TASK4</span>
+          <span class="dragable task5" draggable="true">TASK5</span>
+        </div>
+        <!-- Draggables end here -->
+      </div>
+    </main>
+    <!--main ends here-->
+  </div>
+  <!--container ends here-->
+  <script src="js/vendors/jquery-1.8.3.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
