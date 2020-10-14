@@ -1,1 +1,390 @@
-/*.*/
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+  4. Content / .content
+    4.1 main
+    4.2 counter
+    4.3 draggable
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: "Futura Bold", "Gill Sans", Arial, "Helvetica Neue", Helvetica,
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   2. Body
+   ========================================================================== */
+.wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+/* ==========================================================================
+     3. Header
+     ========================================================================== */
+.header {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #000;
+}
+
+.header h1 {
+  display: inline-block;
+  font-size: 25px;
+  float: left;
+}
+
+.header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .headerRight {
+  margin-top: 5px;
+  float: right;
+}
+
+.header span {
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .start::after {
+  content: "";
+  width: 2px;
+  height: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+/* ==========================================================================
+     4. Content
+     ========================================================================== */
+
+/* 4.1. Main
+     ========================================================================== */
+main .wrapper > span {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+main .containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+main .containers div {
+  width: 25%;
+  height: 250px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+main .drop { text-align: center;}
+
+main .drop span {
+  width: inherit;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.containers .drop :first-child {
+  width: auto;
+  margin-top: 0px;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px; 
+  display: block;
+  text-align: center;
+  color: #000;
+}
+
+main .high :first-child { background-color: #ff2727; }
+main .medium :first-child { background-color: #f7ab48; }
+main .low :first-child { background-color: #fcff4a; }
+
+/* 4.2. Counter
+     ========================================================================== */
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.counter .count {
+  width: 25%;
+  height: 20px;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.counter .nocount { visibility: hidden;}
+
+/* 4.3. FDraggables
+     ========================================================================== */
+
+.draggables {
+  padding: 40px;
+}
+.draggables .dragable {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dragable.dragging { opacity: 0.5; }
+main .containers .hover { border-style: dashed; }
